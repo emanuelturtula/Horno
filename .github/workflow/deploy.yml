@@ -1,0 +1,8 @@
+name: Update automatically
+on: [push]
+jobs:
+  Update-server:
+    runs-on: self-hosted
+    steps:
+      - run: cd ~/Documents/Horno/ && git pull
+      
