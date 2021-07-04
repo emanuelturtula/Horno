@@ -1,4 +1,4 @@
-let url = 'http://192.168.0.2:3000/horno/';
+let url = 'http://0.0.0.0:8000/horno/';
 
 var t = setInterval(fetchData,1000);
 
