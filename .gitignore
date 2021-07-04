@@ -3,3 +3,4 @@ arduino/.pio
 arduino/.vscode
 .vscode
 __pycache__
+.venv
