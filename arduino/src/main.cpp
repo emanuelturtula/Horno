@@ -5,7 +5,7 @@
 #include <ArduinoJson.h>
 #include <StreamUtils.h>
 
-#define URL "http://pc-ema.lan.com:8000/horno/"
+#define URL "http://pihole.lan.com:8000/horno/"
 // #define DEBUG
 #define DEFAULT_CONFIG "{\"samples\": 100, \"analog_reference\": 3.3, \"max_temperature\": 230, \"min_temperature\": 80, \"max_voltage\": 1.77, \"min_voltage\": 1.16}"
 
