@@ -8,6 +8,13 @@ async function fetchData() {
     let parsedData = JSON.parse(data);
     console.log(parsedData);
     var temp = document.getElementById("temp");
-    temp.innerHTML = parsedData.temperature
+    if (parsedData.temperature >= 80)
+    {
+        temp.innerHTML = parsedData.temperature;
+    }
+    else
+    {
+        temp.innerHTML = "Temperatura menor a 80 °"
+    }
 }
 
