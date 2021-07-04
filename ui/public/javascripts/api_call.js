@@ -1,4 +1,4 @@
-let url = 'http://0.0.0.0:8000/horno/';
+let url = 'http://pihole.lan.com:8000/horno/';
 
 var t = setInterval(fetchData,1000);
 
