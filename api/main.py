@@ -25,6 +25,7 @@ class Horno(BaseModel):
     min_voltage: float = 1.16
     samples: int = 100
     analog_reference: float = 3.3
+    voltage: float = 0.0
 
 horno_db = {
     "horno": {
@@ -34,7 +35,8 @@ horno_db = {
         "max_voltage": 1.77,
         "min_voltage": 1.16,
         "samples": 100,
-        "analog_reference": 3.3
+        "analog_reference": 3.3,
+        "voltage": 0.0
     }
 }
 

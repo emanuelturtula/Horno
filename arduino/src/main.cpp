@@ -47,13 +47,16 @@ void print_extra_data()
   Serial.println("///////////////////////////");
 }
 
-void update_temperature(int temperature)
+void update_temperature(float voltage, int temperature)
 {
   HTTPClient http; 
   int response_code;
+
   String payload = "{\"temperature\": ";
   payload += temperature;
-  payload += "}";
+  payload += ", \"voltage\": ";
+  payload += voltage;
+  payload += " }";
 
   if (http.begin(client, URL))
   {
@@ -138,8 +141,8 @@ void loop()
   { 
     digitalWrite(LED_BUILTIN, LOW);
     update_extra_data();
-    update_temperature(get_temperature_from_voltage(read_voltage()));
-    //print_extra_data();
+    float voltage = read_voltage();
+    update_temperature(voltage, get_temperature_from_voltage(voltage));
   }
   else 
     digitalWrite(LED_BUILTIN, HIGH);
